@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#define ll long long int
+#define fast ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define pb push_back
+#define mp make_pair
+#define test ll t; cin>>t;while(t--)
+#define fo(i, x, y)   for (__typeof(x) i = x; i < y; ++i)
+#define fr(i, x, y)   for (__typeof(x) i = x; i > y; i--)
+#define MAX(a,b) ((a)>(b)?(a):(b))
+#define MIN(a,b) ((a)<(b)?(a):(b))
+#define size 10000000000000
+using namespace std;
+int main()
+{
+    fast;
+    test
+    {
+        int i,l,m,n,x;
+        cin>>n>>m;
+        //int a[i],b[i];
+        vector<int>a;
+        vector<int>b;
+        vector<int>c;
+        vector<int>::iterator i1; 
+        fo(i,0,n)
+        {
+            cin>>x;
+            a.push_back(x);
+        }
+        fo(i,0,m)
+        {
+            cin>>x;
+            b.push_back(x);
+        }
+        i1 = std::search(a.begin(), a.end(), b.begin(), b.end());
+        if (i1 != a.end())
+        {
+            l=i1 - a.begin();
+            //c.pb(a[l]);
+            /*i1 = std::search(a.begin()+l, a.end(), b.begin(), b.end());
+            if (i1 != a.end())
+            {
+                c.pb(a[l]);
+                cout<<"YES"<<"\n";
+                cout<<c[0]<<" "<<c[1]<<"\n";
+            }
+            else*/
+            {
+                cout<<"YES"<<"\n";
+                cout<<"1"<<a[l]<<"\n";
+            }
+        }
+        else
+        {
+            cout<<"NO"<<"\n";
+        }
+    }
+}
